@@ -7,6 +7,7 @@ interface Styles {
     forms: React.CSSProperties;
     submit: React.CSSProperties;
     input: React.CSSProperties;
+    root: React.CSSProperties;
 
 }
 
@@ -48,6 +49,13 @@ const styles: Styles = {
         borderRadius: "5px",
         border: "1px solid #ccc",
         width: "100%"
+    },
+    root: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh"
     }
 }
 
@@ -63,7 +71,7 @@ const LoginForm = () => {
                 <input type="password" placeholder="Password" style={styles.input}/>
                 <button type="submit" style={styles.submit}>Login</button>
                 <a href="#" style={{
-                    textDecoration: "none",
+                    textDecoration: "underline",
                     color: "#494B53",
                     fontSize: "14px",
                     marginTop: "10px"
@@ -76,7 +84,7 @@ const LoginForm = () => {
 
 const login = () => {
     return(
-        <div>
+        <div style={styles.root}>
             <LoginForm />
         </div>
     )
