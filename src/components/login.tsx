@@ -1,4 +1,5 @@
 import Logo from "../assets/react.svg"
+import { useState } from "react";
 
 const companyName: string = "MoneyMind";
 interface Styles {
@@ -60,6 +61,9 @@ const styles: Styles = {
 }
 
 const LoginForm = () => {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+
     return(
         <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "50px"}}>
             <div style={styles.container}>
@@ -67,8 +71,8 @@ const LoginForm = () => {
                 <h1>{companyName}</h1>
             </div>
             <form style={styles.forms} action="POST">
-                <input type="text" placeholder="Username" style={styles.input} />
-                <input type="password" placeholder="Password" style={styles.input}/>
+                <input type="text" placeholder="Username" style={styles.input} value={username}  onChange={(e) => setUsername(e.target.value)} />
+                <input type="password" placeholder="Password" style={styles.input} value={password} onChange={(e) => setPassword(e.target.value)}/>
                 <button type="submit" style={styles.submit}>Login</button>
                 <a href="#" style={{
                     textDecoration: "underline",
@@ -82,7 +86,8 @@ const LoginForm = () => {
 }
 
 
-const login = () => {
+
+const Login = () => {
     return(
         <div style={styles.root}>
             <LoginForm />
@@ -90,4 +95,4 @@ const login = () => {
     )
 }
 
-export default login
+export default Login
