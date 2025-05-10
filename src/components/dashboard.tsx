@@ -6,12 +6,12 @@ import { MdAttachMoney } from "react-icons/md";
 import { GiReceiveMoney } from "react-icons/gi";
 
 
+
 const Dashboard = () => {
     return (
         <div className="grid grid-cols-[200px_1fr] bg-[#080808]">
             <Sidebar/>
             <div>
-                <Heading/>
                     <div className="flex bg-[#202020] gap-4 flex-wrap h-38 items-center ml-4 mt-4 rounded-2xl w-[54rem] justify-center">
                         <InfoCard cardName="Average" icon={GiReceiveMoney} value="99999"/>
                         <InfoCard cardName="Total" icon={MdAttachMoney} value="999999"/>
@@ -21,18 +21,6 @@ const Dashboard = () => {
             </div>
         </div>
         )
-}
-
-const Heading = () => {
-    return (
-        <div className="flex justify-between h-15 mt-2">
-            <h1 className="text-5xl font-extrabold self-start ml-1 text-white ">MoneyMin_</h1>
-            <div className="flex gap-5 self-center mr-2">
-                <Notification />
-                <Profile />
-            </div>
-        </div>
-    );
 }
 
 const Sidebar = () => {
@@ -47,22 +35,6 @@ const Sidebar = () => {
     )
 }
 
-const Notification = () => {
-    return(
-        <div className="relative">
-            <p className="absolute -top-2 -right-2 bg-red-500 rounded-full w-6 h-6 flex items-center justify-center text-white">2</p>
-            <IoMdNotifications size={50} className="text-[white]" />
-        </div>
-    )
-}
-
-const Profile = () => {
-    return(
-        <div>
-            <FaUserAlt size={50} className="text-[white]" />
-        </div>
-    )
-}
 
 type InfoCardProps = {
     cardName: string;
