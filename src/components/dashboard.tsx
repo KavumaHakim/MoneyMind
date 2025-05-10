@@ -12,7 +12,7 @@ const Dashboard = () => {
             <Sidebar/>
             <div>
                 <Heading/>
-                    <div className="flex bg-[#202020] w-100% justify-evenly flex-wrap h-45 items-center ml-5 mr-5 rounded-2xl">
+                    <div className="flex bg-[#202020] gap-4 flex-wrap h-38 items-center ml-4 mt-4 rounded-2xl w-[54rem] justify-center">
                         <InfoCard cardName="Average" icon={GiReceiveMoney} value="99999"/>
                         <InfoCard cardName="Total" icon={MdAttachMoney} value="999999"/>
                         <InfoCard cardName="Students" icon={FaUserAlt} value="766"/>
