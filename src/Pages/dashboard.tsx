@@ -5,7 +5,7 @@ import { MdAttachMoney } from "react-icons/md";
 import { GiReceiveMoney } from "react-icons/gi";
 import Sidebar from "../components/Sidebar";
 import Heading from "../components/header";
-
+import Chart from "../components/Chart";
 
 
 const Dashboard = () => {
@@ -20,7 +20,9 @@ const Dashboard = () => {
                         <InfoCard cardName="Total" icon={MdAttachMoney} value="999999"/>
                         <InfoCard cardName="" icon={FaUserAlt} value="766"/>
                         <InfoCard cardName="Students" icon={IoHomeSharp} value="766"/>
+                        
                     </div>
+                    <Chart />
             </div>
         </div>
         )
