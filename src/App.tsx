@@ -1,10 +1,9 @@
-import Heading from "./components/header";
-import Dashboard from "./components/dashboard";
+
+import Dashboard from "./Pages/dashboard";
 
 function App(){
   return(
   <>
-    <Heading />
     <Dashboard />
   </>
   )
