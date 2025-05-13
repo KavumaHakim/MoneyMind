@@ -9,6 +9,7 @@ const data = [
     { name: 'Jan', uv: 4000, pv: 2400 },
 ];
 
+
 const Chart = () => {
     return(
     <div className='w-[20%]'>
