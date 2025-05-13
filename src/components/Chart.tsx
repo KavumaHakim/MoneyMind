@@ -11,7 +11,7 @@ const data = [
 
 const Chart = () => {
     return(
-<ResponsiveContainer width="50%" height={300}>
+<ResponsiveContainer width="100%" height={30000}>
         <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />

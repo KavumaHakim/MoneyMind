@@ -1,4 +1,4 @@
-import Logo from "../assets/react.svg"
+import Logo from "../assets/logo.svg"
 import { useState } from "react";
 
 const companyName: string = "MoneyMind";
@@ -49,7 +49,8 @@ const styles: Styles = {
         padding: "10px",
         borderRadius: "5px",
         border: "1px solid #ccc",
-        width: "100%"
+        width: "100%",
+        outlineColor:"red"
     },
     root: {
         display: "flex",
@@ -65,10 +66,12 @@ const LoginForm = () => {
     const [password, setPassword] = useState("");
 
     return(
-        <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "50px"}}>
+        <main style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "50px"}}>
             <div style={styles.container}>
-                <img src={Logo} style={styles.logo}></img>
-                <h1>{companyName}</h1>
+                <div className="bg-black rounded-full">
+                    <img src={Logo} style={styles.logo}></img>
+                </div>
+                <h1 className="text-4xl text-red-500 font-extrabold font-serif">{companyName}</h1>
             </div>
             <form style={styles.forms} action="POST">
                 <input type="text" placeholder="Username" style={styles.input} value={username}  onChange={(e) => setUsername(e.target.value)} />
@@ -81,7 +84,7 @@ const LoginForm = () => {
                     marginTop: "10px"
                 }}>Forgot Password?</a>
             </form>
-        </div>
+        </main>
     )
 }
 
