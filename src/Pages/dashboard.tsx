@@ -13,7 +13,7 @@ const Dashboard = () => {
         <div className="flex bg-[#080808] w-full">
             <Sidebar/>
             {/* Main content container */}
-            <div className="dashboard-content flex-1 overflow-y-auto flex flex-col">
+            <div className="dashboard-content flex-1 overflow-y-auto flex flex-col gap-5">
                 <Heading />
                 <h1 className="text-3xl font-bold text-red-600 ml-5">Dashboard</h1>
                     <div className="flex bg-[#202020] gap-4 flex-wrap pt-1.5 pb-1.5 items-center mt-4 rounded-2xl w-[95%] md:flex-nowrap pl-1.5 pr-1.5 justify-center self-center">

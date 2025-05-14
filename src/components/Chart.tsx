@@ -1,4 +1,4 @@
-import { Bar, BarChart, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Bar, BarChart, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
     { name: 'Feb', uv: 3000, pv: 1398 },
@@ -12,10 +12,10 @@ const data = [
 
 const Chart = () => {
     return(
-    <div className='w-[20%]'>
+    <div className='pt-5 pr-5 border-1 md:w-[20%] flex items-center border-gray-300 rounded-2xl ml-5 mr-5'>
+        <h2></h2>
         <ResponsiveContainer width="100%" height={250}>
                 <BarChart data={data}>
-                    <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" />
                     <YAxis />
                     <Tooltip />
