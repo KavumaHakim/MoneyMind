@@ -19,7 +19,7 @@ const Chart = () => {
                     <XAxis dataKey="name" />
                     <YAxis />
                     <Tooltip />
-                    <Legend stroke='#080808' fill='#fffff' />
+                    <Legend/>
                     <Bar type="monotone" dataKey="pv" stroke="#8884d8" />
                 </BarChart>
         </ResponsiveContainer>

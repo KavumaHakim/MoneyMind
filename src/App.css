@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+.recharts-legend-item-text {
+    color:white;
+}
+
+.recharts-legend-item-text {
+  fill: #1e90ff !important; /* Dodger Blue */
+  font-size: 14px;
+}
+
+recharts-legend-item-text {
+  fill: #1e90ff !important; /* Dodger Blue */
+  font-size: 14px;
+}
