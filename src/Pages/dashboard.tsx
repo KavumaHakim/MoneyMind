@@ -22,9 +22,12 @@ const Dashboard = () => {
                         <InfoCard cardName="Students" icon={FaUserAlt} value="766"/>
                         <InfoCard cardName="Students" icon={IoHomeSharp} value="766"/>
                         <InfoCard cardName="Students" icon={IoHomeSharp} value="766"/>
-                        
                     </div>
-                    <Chart />
+                    <div className="flex justify-evenly gap-1.5 flex-nowrap flex-col md:flex-row">
+                        <Chart />
+                        <Chart />
+                        <Chart />
+                    </div>
             </div>
         </div>
         )
