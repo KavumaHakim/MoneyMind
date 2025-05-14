@@ -1,5 +1,6 @@
 import Logo from "../assets/logo.svg"
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const companyName: string = "MoneyMind";
 interface Styles {
@@ -76,7 +77,8 @@ const LoginForm = () => {
             <form style={styles.forms} action="POST">
                 <input type="text" placeholder="Username" style={styles.input} value={username}  onChange={(e) => setUsername(e.target.value)} />
                 <input type="password" placeholder="Password" style={styles.input} value={password} onChange={(e) => setPassword(e.target.value)}/>
-                <button type="submit" style={styles.submit}>Login</button>
+                {/* <button type="submit" style={styles.submit}>Login</button> */}
+                <Link to="/" style={styles.submit}>Dashboard</Link>
                 <a href="#" style={{
                     textDecoration: "underline",
                     color: "#494B53",
