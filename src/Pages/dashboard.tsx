@@ -1,4 +1,3 @@
-import { IoHomeSharp } from "react-icons/io5";
 import type { IconType } from "react-icons";
 import { FaUserAlt } from "react-icons/fa";
 import { MdAttachMoney } from "react-icons/md";
