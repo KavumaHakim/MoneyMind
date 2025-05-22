@@ -7,7 +7,7 @@ import { GrTransaction } from "react-icons/gr";
 import Sidebar from "../components/Sidebar";
 import Heading from "../components/header";
 import Chart from "../components/Chart";
-// import StudentTable from "../components/Table";
+import StudentTable from "../components/Table";
 
 const Dashboard = () => {
     return (
@@ -29,7 +29,7 @@ const Dashboard = () => {
                         <Chart title="Test 2" ctype="Bar"/>
                         <Chart title="Test 3" ctype="Bar" />
                     </div>
-                    {/* <StudentTable /> */}
+                    <StudentTable />
             </main>
         </div>
         )
