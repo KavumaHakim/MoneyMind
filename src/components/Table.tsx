@@ -1,7 +1,7 @@
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
-import papa from "papaparse";
 import { useEffect, useState } from "react";
+import useFetch from "../Hooks/useFetch";
 
 interface Student {
     id: number;
@@ -11,27 +11,16 @@ interface Student {
     amount: number;
 }
 
+
 const StudentsTable = () => {
     const [students, setStudents] = useState<Student[]>([]);
+    const { fetchData } = useFetch();
 
     useEffect(() => {
-        fetch("./MOCK_DATA.csv")
-            .then((response) => response.text())
-            .then((csvText) => {
-                papa.parse<Student>(csvText, {
-                    header: true,
-                    skipEmptyLines: true,
-                    transform: (value, field) =>
-                        field === 'id' || field === 'amount' ? Number(value) : value,
-                    complete: (results) => {
-                        console.log(results.data);
-                        setStudents(results.data);
-                    },
-                });
-            });
+        fetchData("/data.csv", setStudents);
     }, []);
-    students.map((s) => console.log(Object.keys(s)));
 
+    console.log(students);
 
     return (
         <div className="flex flex-col items-center">
