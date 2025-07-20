@@ -15,7 +15,9 @@ const Heading = () => {
 const Notification = ({ amount }: { amount: string }) => {
     return(
         <div className="relative">
-            <div className="absolute -top-1 -right-1 bg-red-500 rounded-full w-2 h-2 flex items-center justify-center text-white text-[15px]"></div>
+            <div className="absolute -top-1 -right-1 bg-red-500 rounded-full min-w-[20px] h-5 flex items-center justify-center text-white text-xs font-bold px-1">
+                {amount}
+            </div>
             <IoMdNotifications size={30} className="text-amber-400" />
         </div>
     )
