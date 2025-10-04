@@ -28,7 +28,7 @@ Documentation and setup instructions coming soon.
 
 ## Contributing
 
-We welcome contributions to MoneyMind! Please read our contributing guidelines before submitting pull requests.
+We welcome contributions to MoneyMind!
 
 ## License
 
